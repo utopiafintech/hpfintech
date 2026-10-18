@@ -289,10 +289,39 @@ section {
   max-width: 56ch;
 }
 
-.contact a.mail {
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 36px;
+}
+
+.contact-item {
+  background: var(--second);
+  border-left: 6px solid var(--main);
+  border-radius: 4px;
+  padding: 22px 24px;
+}
+
+.contact-item h3 {
+  color: var(--main-dark);
+  margin-bottom: 6px;
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 1.1rem;
+  overflow-wrap: anywhere;
+}
+
+.contact-item a {
   font-family: "Oswald", sans-serif;
-  font-size: 1.4rem;
   letter-spacing: 0.04em;
+  text-decoration: none;
+  border-bottom: 2px solid var(--main);
+}
+
+.contact-item a:hover {
   color: var(--main-dark);
 }
 
