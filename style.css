@@ -1,0 +1,352 @@
+:root {
+  --main: #1ad1ff;
+  --second: #ccf5ff;
+  --third: #ffffff;
+  --ink: #0b2530;
+  --ink-soft: #3d5a66;
+  --main-dark: #0aa6cc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--third);
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-family: "Anton", Impact, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin: 0 0 16px;
+}
+
+h3 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  margin: 0 0 8px;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--third);
+  border-bottom: 3px solid var(--main);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.logo {
+  font-family: "Anton", Impact, sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--main);
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+  border-bottom-color: var(--main);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 2px solid var(--ink);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 4px;
+  font-size: 1rem;
+  background: var(--main);
+  color: var(--ink);
+  border: 2px solid var(--main);
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--third);
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--ink);
+  margin-left: 12px;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(160deg, var(--second) 0%, var(--third) 70%);
+  padding: 96px 0 104px;
+}
+
+.eyebrow {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.9rem;
+  color: var(--main-dark);
+  margin: 0 0 12px;
+  font-weight: 500;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 8vw, 5.5rem);
+  max-width: 14ch;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--main-dark);
+}
+
+.hero p.lead {
+  font-size: 1.2rem;
+  color: var(--ink-soft);
+  max-width: 52ch;
+  margin: 0 0 32px;
+}
+
+/* ---------- Sections ---------- */
+section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 5px;
+  background: var(--main);
+  margin-top: 12px;
+}
+
+.about {
+  background: var(--second);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.stats {
+  display: grid;
+  gap: 16px;
+}
+
+.stat {
+  background: var(--third);
+  border-left: 6px solid var(--main);
+  padding: 18px 22px;
+  border-radius: 4px;
+}
+
+.stat strong {
+  display: block;
+  font-family: "Anton", Impact, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+.stat span {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+/* ---------- Services ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.card {
+  border: 2px solid var(--second);
+  border-top: 6px solid var(--main);
+  border-radius: 6px;
+  padding: 28px 24px;
+  background: var(--third);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(26, 209, 255, 0.25);
+}
+
+.card p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+/* ---------- Call to action ---------- */
+.cta {
+  background: var(--main);
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.cta p {
+  max-width: 54ch;
+  margin: 0 auto 28px;
+}
+
+.cta .btn {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--third);
+}
+
+.cta .btn:hover {
+  background: var(--third);
+  border-color: var(--third);
+  color: var(--ink);
+}
+
+/* ---------- Contact / Footer ---------- */
+.contact p {
+  max-width: 56ch;
+}
+
+.contact a.mail {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.04em;
+  color: var(--main-dark);
+}
+
+footer {
+  background: var(--ink);
+  color: var(--second);
+  padding: 28px 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 760px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--third);
+    border-bottom: 3px solid var(--main);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--second);
+  }
+
+  .hero {
+    padding: 64px 0 72px;
+  }
+
+  section {
+    padding: 56px 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .btn-outline {
+    margin-left: 0;
+    margin-top: 12px;
+  }
+}
